@@ -12,11 +12,11 @@ main(int argc, char *  argv[])
     b=libUncertainDoubleGaussDist(10.0,5.0);
     c=(a*b/sqrt(b*b+a));
     d=a*a+b*b;
-    printf("Mean value of c is: %lf\n",c);
-    printf("Mean value of d is: %lf\n",d);
-    printf("Variance of b (which is %lf actually) is: %lf\n",ss*ss,libUncertainDoubleNthMoment(b,2)); 
-
-    printf("Variance of c is: %lf\n",libUncertainDoubleNthMoment(c,2));
+    printf("a is Exp(1/3) with true mean 3, the mean here is: %lf\n",a); //3
+    printf("\nMean value of d should be 143, it is here: %lf\n",d);
+    printf("\nMean value of c is: %lf\n",c); //close enough to R simlations
+    printf("R simulation gave mean of c to be 2.73 which is close enough.\n");
+    printf("\n\nVariance of c is: %lf\n",libUncertainDoubleNthMoment(c,2));
     printf("Variance of d is: %lf\n",libUncertainDoubleNthMoment(d,2));
 
 
